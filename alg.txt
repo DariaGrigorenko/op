@@ -1,0 +1,20 @@
+def genrand(m, n, user_min_limit, user_max_limit):
+    matrix = []
+    for i in range(m):
+        row=[]
+        for j in range(n):
+            row.append(random.randint(user_min_limit, user_max_limit))
+        matrix.append(row)
+    return matrix
+def prmat(matrix):
+    for row in matrix:
+        print(row)
+user_m = int(input("Введите количество строк: ")) 
+user_n = int(input("Введите количество столбцов: "))  
+user_min_limit = int(input("Введите минимальное значение: "))  
+user_max_limit = int(input("Введите максимальное значение: "))  
+
+
+my_matrix = genrand(user_m, user_n, user_min_limit, user_max_limit)
+
+prmat(my_matrix)
